@@ -1,0 +1,23 @@
+<!-- views/deleteUser.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+</head>
+<body>
+    <h2>Enter email and password to delete user</h2>
+    <form method="post" action="/user/<%= userId %>/delete?_method=DELETE">
+        <label for="email">Email:
+            <input type="text" name="email" id="email" placeholder="Enter email" required>
+        </label>
+        <br />
+        <label for="password">Password:
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+        </label>
+        <br />
+        <button type="submit">Delete User</button>
+    </form>
+</body>
+</html>
